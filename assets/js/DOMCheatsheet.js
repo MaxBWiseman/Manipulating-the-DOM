@@ -267,3 +267,31 @@ $('button').mouseleave(function() {
     $('button').removeClass('make-border').addClass('make-red')
 })
 //This is an example of how you would use jQuery to remove and add classes to an element , chaining them together
+
+$(".box").on("click", function() {
+    /**
+     * When we click on an element that has
+     * a 'box' class, this event will be fired.
+     */
+    var classNames = $(this).attr("class").split(" ");
+    var boxClass = classNames[0];
+    var className = classNames[1];
+    if ($(this).css("background-color") == "rgb(255, 0, 0)") {
+        // If this object is already red, turn it black
+        $("." + className).css("background-color", "#000"); 
+    } else {
+        // Else turn all elements with a box class black
+        // and then change the color of all elements
+        // with the same class name as the clicked element
+        // to red.
+        $("." + boxClass).css("background-color", "#000");
+        $("." + className).css("background-color", "red");
+    }
+});
+// An if statement that checks the background color of an element and changes it to red if it is black
+// and changes it to black if it is red. This is an example of how you would use jQuery to change the css of an element
+
+$('.card').mouseenter(function() {
+    $(this).fadeTo(2000, 0.2).fadeTo(2000,1)
+})
+//This is an example of how you would use jQuery to fade an element in and out when hovered over
