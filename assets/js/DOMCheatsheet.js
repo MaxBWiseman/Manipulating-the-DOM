@@ -249,3 +249,21 @@ $('#card-panel-4').click(function() {
 })
 //This is an example of how you would use jQuery to hide an element when clicked.
 // . for classes and # for ids
+
+$("#myButton").removeClass("blueBox").addClass("border");
+$("p").css("color", "blue").slideUp(2000).slideDown(2000);
+//methods can be chained together to perform multiple actions on the same selection
+//Chaining gives us the ability to run multiple jQuery methods on a single element while using only a single statement.
+
+$("a").attr("href", "http://www.example.com");
+//This is an example of how you would use jQuery to change the href attribute of an anchor tag
+//.attr() is a method that can be used to change the attributes of an element
+
+$('button').mouseenter(function() {
+    $('button').removeClass('make-red').addClass('make-border')
+})
+
+$('button').mouseleave(function() {
+    $('button').removeClass('make-border').addClass('make-red')
+})
+//This is an example of how you would use jQuery to remove and add classes to an element , chaining them together
