@@ -7,6 +7,12 @@
  * Selecting elements.
  */
 
+$(document).ready(function() {// This is the jQuery shorthand for "run this code when the page is ready"
+    $("h2").addClass("underline");// an example of how you would input new classes
+    $("ul").addClass("border");// changing css with jquary directly is not preferred but it is possible
+});
+// 
+
 // Returns a single element. This is because we can't every have more than
 // one element with the same id. Note that we don't include a '#' for the id
 var article = document.getElementById('home-page');
@@ -182,3 +188,64 @@ $(":header");
  
  // Append a span containing the copyright to the footer 
  $("my_footer").append("<span>&copy; 2017.</span>")
+
+
+ $(document).ready(function() {
+    $("#stream1_btn").on("click", function() {
+        $(".stream1").toggle(500,'swing');//toggle() can take an integer as an argument for milliseconds
+        $(".stream2").slideDown(400,'linear');//slideDown() can take an integer as an argument for milliseconds
+        $(".stream3").slideUp('slow');//These are the three different types of animations
+        $(".stream1").slideToggle('fast');
+   });
+   $("#stream2_btn").mouseenter(function() { //mouseenter is a shorthand for .on("mouseenter")
+        $(".stream1").hide('slow');//hide() is a shorthand for .css("display", "none")
+        $(".stream2").hide('medium');//hide and show use slow, medium, and fast as arguments
+        $(".stream3").show('fast');//show() is a shorthand for .css("display", "block")
+        $(".stream2").show(1000);//show() can also take an integer as an argument for milliseconds
+   });
+   $("#stream3_btn").click(function() { // uses the .click() method instead of .on()
+        $(".stream1").fadeIn(500);//
+        $(".stream2").fadeOut(800);
+        $(".stream3").fadeTo(1000, 0.5);//fadeTo() can take two arguments, milliseconds and opacity
+        $(".stream3").addClass('highlight_stream');
+   });
+}); 
+
+//This is an example of how you would use jQuery to change the css of an element
+//when a user clicks on a button. This is a simple example, but it shows how jQuery works
+
+$('p').click(function() {
+    $('p').css('color', 'red')
+})
+
+$('h2').hover(function() {
+    $('h2').css('background', 'lightblue')
+})
+
+$('.card-panel').mouseenter(function() {
+    $('body').css('background-color', 'black')
+})
+
+$('.card-panel').mouseleave(function() {
+    $('body').css('background-color', '#e1e2e2')
+})
+//This is an example of how you would use jQuery to change the css of an element
+//when clicked, hovered over, or when the mouse leaves the element. This is a simple example,
+
+$('#card-panel-1').click(function() {
+    $('#card-panel-1').hide('slow')
+})
+
+$('#card-panel-2').click(function() {
+    $('#card-panel-2').hide('medium')
+})
+
+$('#card-panel-3').click(function() {
+    $('#card-panel-3').hide('fast')
+})
+
+$('#card-panel-4').click(function() {
+    $('#card-panel-4').hide(3000)
+})
+//This is an example of how you would use jQuery to hide an element when clicked.
+// . for classes and # for ids
