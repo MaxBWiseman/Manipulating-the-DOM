@@ -302,9 +302,27 @@ $("#theButton").parent()
 //Examples of how you would use jQuery to select elements based on their relationship to other elements
 //Traversing the DOM tree is a common task when working with jQuery.
 
-$("div").toggleClass("bigBorder")//
+$("div").toggleClass("bigBorder")
 //this is usefull for toggling classes that require to be on and off
+
+$("button").click(function() {
+	$(this).next().slideToggle('slow')
+});
+//next() is used to select the next sibling element of the selected element
+//slideToggle() is used to show or hide the selected elements with a sliding motion
 
 $("div").next().css("background-color", "red");
 $("div").prev().css("background-color", "blue");
 //next() and prev() are used to select the next and previous sibling elements of the selected element
+
+$("h2").first().css("background-color", "yellow");
+$(".contentDiv").last().css("background-color", "green");
+//first() and last() are used to select the first and last element that the page finds
+
+$("h2").siblings().css("background-color", "yellow");
+//siblings() is used to select all sibling elements of the selected element
+
+$("div").filter(".middle").css("border-color", "black");
+$("div").filter("#top").addClass("selected");
+//filter() is used to select elements that match a certain criteria
+//filters for elements that have a class of .middle and #top
