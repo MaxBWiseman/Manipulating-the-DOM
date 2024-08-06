@@ -295,3 +295,16 @@ $('.card').mouseenter(function() {
     $(this).fadeTo(2000, 0.2).fadeTo(2000,1)
 })
 //This is an example of how you would use jQuery to fade an element in and out when hovered over
+
+$("div").children("p")
+$("div").children()
+$("#theButton").parent()
+//Examples of how you would use jQuery to select elements based on their relationship to other elements
+//Traversing the DOM tree is a common task when working with jQuery.
+
+$("div").toggleClass("bigBorder")//
+//this is usefull for toggling classes that require to be on and off
+
+$("div").next().css("background-color", "red");
+$("div").prev().css("background-color", "blue");
+//next() and prev() are used to select the next and previous sibling elements of the selected element
