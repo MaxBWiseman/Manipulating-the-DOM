@@ -7,9 +7,9 @@
  * Selecting elements.
  */
 
-$(document).ready(function() {// This is the jQuery shorthand for "run this code when the page is ready"
-    $("h2").addClass("underline");// an example of how you would input new classes
-    $("ul").addClass("border");// changing css with jquary directly is not preferred but it is possible
+$(document).ready(function () { // This is the jQuery shorthand for "run this code when the page is ready"
+    $("h2").addClass("underline"); // an example of how you would input new classes
+    $("ul").addClass("border"); // changing css with jquary directly is not preferred but it is possible
 });
 // 
 
@@ -52,7 +52,7 @@ let section = article.firstElementChild;
 /*
  * Creating new elements
  */
- 
+
 // Create a new li to go in the nav
 var li = document.createElement('li');
 
@@ -155,96 +155,96 @@ $(":header");
  * jQuery selectors
  */
 
- // Get the `background-color` of all paragraphs
- $("p").css("background-color");
+// Get the `background-color` of all paragraphs
+$("p").css("background-color");
 
- // Get the `font-family` of all paragraphs
- $("p").css("font-family");
- 
- // Change the color of the text of all list item elements
- $("li").css("color", "red");
- 
- // Underline all h2 elements
- $("h2").css("text-decoration", "underline");
- 
- // Add a solid border of 1px and a color of `#ccc` to all unordered lists
- $("ul").css("border", "solid 1px #ccc");
- 
- // Get the HTML contained within an element with an ID of `my_footer`
- $("#my_footer").html();
- 
- // Get the HTML contained within an element called `body`
- $("body").html();
- 
- // Add a h1 to the `body` element
- $("body").html("<h1>This is my fancy new content. Thanks jQuery, you're the best!</h1>");
- 
- // Add new text to the footer
- $("#my_footer").text("This is my fancy new text. Thanks again jQuery");
- 
- // Append a new element to the end of all of the elements contained in the
- // element that has an ID of `myElement`
- $("#myElement").append("<p>This is a new element</p>");
- 
- // Append a span containing the copyright to the footer 
- $("my_footer").append("<span>&copy; 2017.</span>")
+// Get the `font-family` of all paragraphs
+$("p").css("font-family");
+
+// Change the color of the text of all list item elements
+$("li").css("color", "red");
+
+// Underline all h2 elements
+$("h2").css("text-decoration", "underline");
+
+// Add a solid border of 1px and a color of `#ccc` to all unordered lists
+$("ul").css("border", "solid 1px #ccc");
+
+// Get the HTML contained within an element with an ID of `my_footer`
+$("#my_footer").html();
+
+// Get the HTML contained within an element called `body`
+$("body").html();
+
+// Add a h1 to the `body` element
+$("body").html("<h1>This is my fancy new content. Thanks jQuery, you're the best!</h1>");
+
+// Add new text to the footer
+$("#my_footer").text("This is my fancy new text. Thanks again jQuery");
+
+// Append a new element to the end of all of the elements contained in the
+// element that has an ID of `myElement`
+$("#myElement").append("<p>This is a new element</p>");
+
+// Append a span containing the copyright to the footer 
+$("my_footer").append("<span>&copy; 2017.</span>")
 
 
- $(document).ready(function() {
-    $("#stream1_btn").on("click", function() {
-        $(".stream1").toggle(500,'swing');//toggle() can take an integer as an argument for milliseconds
-        $(".stream2").slideDown(400,'linear');//slideDown() can take an integer as an argument for milliseconds
-        $(".stream3").slideUp('slow');//These are the three different types of animations
+$(document).ready(function () {
+    $("#stream1_btn").on("click", function () {
+        $(".stream1").toggle(500, 'swing'); //toggle() can take an integer as an argument for milliseconds
+        $(".stream2").slideDown(400, 'linear'); //slideDown() can take an integer as an argument for milliseconds
+        $(".stream3").slideUp('slow'); //These are the three different types of animations
         $(".stream1").slideToggle('fast');
-   });
-   $("#stream2_btn").mouseenter(function() { //mouseenter is a shorthand for .on("mouseenter")
-        $(".stream1").hide('slow');//hide() is a shorthand for .css("display", "none")
-        $(".stream2").hide('medium');//hide and show use slow, medium, and fast as arguments
-        $(".stream3").show('fast');//show() is a shorthand for .css("display", "block")
-        $(".stream2").show(1000);//show() can also take an integer as an argument for milliseconds
-   });
-   $("#stream3_btn").click(function() { // uses the .click() method instead of .on()
-        $(".stream1").fadeIn(500);//
+    });
+    $("#stream2_btn").mouseenter(function () { //mouseenter is a shorthand for .on("mouseenter")
+        $(".stream1").hide('slow'); //hide() is a shorthand for .css("display", "none")
+        $(".stream2").hide('medium'); //hide and show use slow, medium, and fast as arguments
+        $(".stream3").show('fast'); //show() is a shorthand for .css("display", "block")
+        $(".stream2").show(1000); //show() can also take an integer as an argument for milliseconds
+    });
+    $("#stream3_btn").click(function () { // uses the .click() method instead of .on()
+        $(".stream1").fadeIn(500); //
         $(".stream2").fadeOut(800);
-        $(".stream3").fadeTo(1000, 0.5);//fadeTo() can take two arguments, milliseconds and opacity
+        $(".stream3").fadeTo(1000, 0.5); //fadeTo() can take two arguments, milliseconds and opacity
         $(".stream3").addClass('highlight_stream');
-   });
-}); 
+    });
+});
 
 //This is an example of how you would use jQuery to change the css of an element
 //when a user clicks on a button. This is a simple example, but it shows how jQuery works
 
-$('p').click(function() {
+$('p').click(function () {
     $('p').css('color', 'red')
 })
 
-$('h2').hover(function() {
+$('h2').hover(function () {
     $('h2').css('background', 'lightblue')
 })
 
-$('.card-panel').mouseenter(function() {
+$('.card-panel').mouseenter(function () {
     $('body').css('background-color', 'black')
 })
 
-$('.card-panel').mouseleave(function() {
+$('.card-panel').mouseleave(function () {
     $('body').css('background-color', '#e1e2e2')
 })
 //This is an example of how you would use jQuery to change the css of an element
 //when clicked, hovered over, or when the mouse leaves the element. This is a simple example,
 
-$('#card-panel-1').click(function() {
+$('#card-panel-1').click(function () {
     $('#card-panel-1').hide('slow')
 })
 
-$('#card-panel-2').click(function() {
+$('#card-panel-2').click(function () {
     $('#card-panel-2').hide('medium')
 })
 
-$('#card-panel-3').click(function() {
+$('#card-panel-3').click(function () {
     $('#card-panel-3').hide('fast')
 })
 
-$('#card-panel-4').click(function() {
+$('#card-panel-4').click(function () {
     $('#card-panel-4').hide(3000)
 })
 //This is an example of how you would use jQuery to hide an element when clicked.
@@ -259,16 +259,16 @@ $("a").attr("href", "http://www.example.com");
 //This is an example of how you would use jQuery to change the href attribute of an anchor tag
 //.attr() is a method that can be used to change the attributes of an element
 
-$('button').mouseenter(function() {
+$('button').mouseenter(function () {
     $('button').removeClass('make-red').addClass('make-border')
 })
 
-$('button').mouseleave(function() {
+$('button').mouseleave(function () {
     $('button').removeClass('make-border').addClass('make-red')
 })
 //This is an example of how you would use jQuery to remove and add classes to an element , chaining them together
 
-$(".box").on("click", function() {
+$(".box").on("click", function () {
     /**
      * When we click on an element that has
      * a 'box' class, this event will be fired.
@@ -278,7 +278,7 @@ $(".box").on("click", function() {
     var className = classNames[1];
     if ($(this).css("background-color") == "rgb(255, 0, 0)") {
         // If this object is already red, turn it black
-        $("." + className).css("background-color", "#000"); 
+        $("." + className).css("background-color", "#000");
     } else {
         // Else turn all elements with a box class black
         // and then change the color of all elements
@@ -291,8 +291,8 @@ $(".box").on("click", function() {
 // An if statement that checks the background color of an element and changes it to red if it is black
 // and changes it to black if it is red. This is an example of how you would use jQuery to change the css of an element
 
-$('.card').mouseenter(function() {
-    $(this).fadeTo(2000, 0.2).fadeTo(2000,1)
+$('.card').mouseenter(function () {
+    $(this).fadeTo(2000, 0.2).fadeTo(2000, 1)
 })
 //This is an example of how you would use jQuery to fade an element in and out when hovered over
 
@@ -305,8 +305,8 @@ $("#theButton").parent()
 $("div").toggleClass("bigBorder")
 //this is usefull for toggling classes that require to be on and off
 
-$("button").click(function() {
-	$(this).next().slideToggle('slow')
+$("button").click(function () {
+    $(this).next().slideToggle('slow')
 });
 //next() is used to select the next sibling element of the selected element
 //slideToggle() is used to show or hide the selected elements with a sliding motion
@@ -326,3 +326,8 @@ $("div").filter(".middle").css("border-color", "black");
 $("div").filter("#top").addClass("selected");
 //filter() is used to select elements that match a certain criteria
 //filters for elements that have a class of .middle and #top
+
+let panelColor = $(this).css("background-color");
+console.log(panelColor);
+$('.resetButton').css('background-color', panelColor);
+//how to use variables with jQuery to store the css of an element and then use it to change the css of another element
